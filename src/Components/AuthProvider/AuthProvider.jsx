@@ -25,6 +25,7 @@ const updateUserProfile = (name, photo) => {
         photoURL: photo
       })
       
+      
 }
 
 
