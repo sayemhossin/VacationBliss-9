@@ -8,7 +8,6 @@ import {
 import Root from './Root/Root';
 import Home from './Pages/Home/Home';
 import UpdateProfile from './Pages/UpdateProfile/UpdateProfile';
-import UserProfile from './Pages/UserProfile/UserProfile';
 import CardDetails from './Pages/CardDetails/CardDetails';
 import ErrorPage from './Pages/Error/ErrorPage';
 
@@ -31,11 +30,8 @@ const router = createBrowserRouter([
       {
         path: '/updateProfile',
         element: <UpdateProfile></UpdateProfile>
-      },
-      {
-        path: '/userProfile',
-        element: <UserProfile></UserProfile>
       }
+     
     ]
   },
 ]);
