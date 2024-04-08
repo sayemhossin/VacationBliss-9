@@ -10,6 +10,9 @@ import Home from './Pages/Home/Home';
 import UpdateProfile from './Pages/UpdateProfile/UpdateProfile';
 import CardDetails from './Pages/CardDetails/CardDetails';
 import ErrorPage from './Pages/Error/ErrorPage';
+import Login from './Pages/Login/Login';
+import AuthProvider from './Components/AuthProvider/AuthProvider';
+import Register from './Pages/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +33,14 @@ const router = createBrowserRouter([
       {
         path: '/updateProfile',
         element: <UpdateProfile></UpdateProfile>
+      },
+      {
+        path:'/login',
+        element:<Login></Login>
+      },
+      {
+        path:'/register',
+        element:<Register></Register>
       }
      
     ]
@@ -38,6 +49,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
