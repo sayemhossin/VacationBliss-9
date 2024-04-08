@@ -2,6 +2,9 @@ import { useContext } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import {  toast } from 'react-toastify';
+
+
 
 const Login = () => {
     const { signIn }= useContext(AuthContext)
@@ -16,8 +19,8 @@ const onSubmit = data =>{
     const {email,password} = data
 
     signIn(email,password)
-    .then(result =>{
-        console.log(result)
+    .then(() =>{
+     toast.success('Login Success')
     })
     .catch(err=>{
         console.log(err)
@@ -32,7 +35,7 @@ const onSubmit = data =>{
         <div className="hero mt-14 mb-14">
         <div className="hero-content flex-col w-full">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Register Now!</h1>
+            <h1 className="text-5xl font-bold">Login Now!</h1>
             
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

@@ -19,7 +19,7 @@ const {id,image,estate_title,segment_name,description,price,status,area,location
 				<div  className="flex justify-around">
 					<div className="text-gray-700">
 					<h2 className="md:text-2xl text-[17px]  font-bold mb-2 pr-32">Facilities:</h2>
-					<p className=" md:text-xl">{facilities.map(f => <li className="flex items-center" key={f.idx}><FaCaretRight className="text-[16px] "/>{f}</li>)}</p>
+					<p className=" md:text-xl">{facilities.map((f,index) => <li className="flex items-center" key={index}><FaCaretRight className="text-[16px] "/>{f}</li>)}</p>
 					</div>
 					<div>
 					<p className="md:text-2xl"><span className="font-bold">Status: </span> {status}</p>
@@ -36,7 +36,7 @@ const {id,image,estate_title,segment_name,description,price,status,area,location
 			<div className="divider mt-3 "></div>
 			<div className="flex justify-end">
            <Link to={`/details/${id}`}> <button className="btn text-xs
-		   md:text-[16px]  bg-green-500">
+		   md:text-[16px]   bg-[#378CE7] hover:bg-[#1181f8] text-[#ecf0f1]">
             View Property <FaArrowRight />
             </button></Link>
             </div>
