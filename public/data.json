@@ -2,7 +2,7 @@
       {
         "id": 1,
         "estate_title": "Seaside Villa Retreat",
-        "segment_name": "Vacation Rentals",
+        "segment_name": "  Lodges",
         "description": "Escape to this serene seaside villa, offering stunning ocean views and direct beach access.",
         "price": "$400/night",
         "status": "rent",
@@ -14,10 +14,10 @@
       {
         "id": 2,
         "estate_title": "Lakefront Cabin Getaway",
-        "segment_name": "Vacation Rentals",
+        "segment_name": "  Guesthouses",
         "description": "Relax and unwind at this cozy lakefront cabin, surrounded by picturesque views and nature trails.",
-        "price": "$250/night",
-        "status": "rent",
+        "price": "$25M",
+        "status": "sell",
         "area": "2000 sq ft",
         "location": "Lake Tahoe, Nevada",
         "facilities": ["dock access", "fire pit", "wrap-around porch"],
@@ -26,7 +26,7 @@
       {
         "id": 3,
         "estate_title": "Urban Loft Experience",
-        "segment_name": "Vacation Rentals",
+        "segment_name": "  Lodges",
         "description": "Immerse yourself in city living at this stylish urban loft, located in the heart of downtown.",
         "price": "$300/night",
         "status": "rent",
@@ -38,7 +38,7 @@
       {
         "id": 4,
         "estate_title": "Coastal Cottage Charm",
-        "segment_name": "Vacation Rentals",
+        "segment_name": "  Motels",
         "description": "Experience coastal living at its finest in this charming cottage just steps away from the beach.",
         "price": "$22M",
         "status": "sale",
@@ -50,7 +50,7 @@
       {
         "id": 5,
         "estate_title": "Mountain Retreat Lodge",
-        "segment_name": "Vacation Rentals",
+        "segment_name": "  Resorts",
         "description": "Get away from it all at this rustic mountain lodge, offering panoramic views and hiking trails.",
         "price": "$350/night",
         "status": "rent",
@@ -62,7 +62,7 @@
       {
         "id": 6,
         "estate_title": "Desert Oasis Villa",
-        "segment_name": "Vacation Rentals",
+        "segment_name": "  Resorts",
         "description": "Escape to the tranquility of the desert at this luxurious villa with a private pool and desert views.",
         "price": "$450/night",
         "status": "rent",

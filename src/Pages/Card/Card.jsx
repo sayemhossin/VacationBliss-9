@@ -14,7 +14,7 @@ const {id,image,estate_title,segment_name,description,price,status,area,location
 			<div className="divider mt-0 mb-0"></div>
 			<div className="space-y-3 mt-4 text-gray-500">
 				
-				<p className="md:text-xl">Segment: {segment_name}</p>
+				<p className="md:text-2xl">Segment: <span className="font-bold">{segment_name}</span></p>
 				
 				<div  className="flex justify-around">
 					<div className="text-gray-700">
