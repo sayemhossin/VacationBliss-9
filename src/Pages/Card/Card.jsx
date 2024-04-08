@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Card = ({card}) => {
-const {id,image,estate_title} = card
+const {id,image,estate_title,segment_name,description,price,status,area,location,facilities} = card
      return (
         <section className=" mt-6 dark:bg-gray-100 dark:text-gray-800">
 	<div className="container  flex flex-col  mx-auto   lg:flex-row lg:justify-between">
@@ -11,9 +11,16 @@ const {id,image,estate_title} = card
 		<div className="flex flex-col justify-center lg:mr-80 p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
 			<h1 className="md:text-5xl font-bold leading-none sm:text-6xl">{estate_title}
 			</h1>
-			<p className="mt-6 mb-8 text-lg sm:mb-12">Dictum aliquam porta in condimentum ac integer
-				<br  className="hidden md:inline lg:hidden" />turpis pulvinar, est scelerisque ligula sem
-			</p>
+			<div>
+				<p>{segment_name}</p>
+				<p>{description}</p>
+				<p>{price}</p>
+				<p>{status}</p>
+				<p>{area}</p>
+				<p>{location}</p>
+				<p>{facilities.map(f => <p key={f.idx}>{f}</p>)}</p>
+				
+			</div>
 			<div>
            <Link to={`/details/${id}`}> <button className="btn">
             View Property

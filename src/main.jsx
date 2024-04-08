@@ -9,24 +9,30 @@ import Root from './Root/Root';
 import Home from './Pages/Home/Home';
 import UpdateProfile from './Pages/UpdateProfile/UpdateProfile';
 import UserProfile from './Pages/UserProfile/UserProfile';
+import CardDetails from './Pages/CardDetails/CardDetails';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children:[
+    children: [
       {
-        path:'/',
-        element:<Home></Home>,
-        loader:()=> fetch('/data.json')
+        path: '/',
+        element: <Home></Home>,
+        loader: () => fetch('/data.json')
       },
       {
-        path:'/updateProfile',
-        element:<UpdateProfile></UpdateProfile>
+        path:'/details/:id',
+        element:<CardDetails></CardDetails>,
+        loader: () => fetch('/data.json')
       },
       {
-        path:'/userProfile',
-        element:<UserProfile></UserProfile>
+        path: '/updateProfile',
+        element: <UpdateProfile></UpdateProfile>
+      },
+      {
+        path: '/userProfile',
+        element: <UserProfile></UserProfile>
       }
     ]
   },
@@ -34,6 +40,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
