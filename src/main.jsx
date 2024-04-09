@@ -13,6 +13,8 @@ import ErrorPage from './Pages/Error/ErrorPage';
 import Login from './Pages/Login/Login';
 import AuthProvider from './Components/AuthProvider/AuthProvider';
 import Register from './Pages/Register/Register';
+import Profile from './Pages/Profile/Profile';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -27,12 +29,12 @@ const router = createBrowserRouter([
       },
       {
         path:'/details/:id',
-        element:<CardDetails></CardDetails>,
+        element:<PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
         loader: () => fetch('/data.json')
       },
       {
         path: '/updateProfile',
-        element: <UpdateProfile></UpdateProfile>
+        element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
       },
       {
         path:'/login',
@@ -41,6 +43,10 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element:<Register></Register>
+      },
+      {
+        path:'/profile',
+        element:<PrivateRoute><Profile></Profile></PrivateRoute>
       }
      
     ]

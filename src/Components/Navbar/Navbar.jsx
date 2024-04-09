@@ -16,7 +16,12 @@ const Navbar = () => {
   const links = <>
   <div className="flex  flex-col lg:flex-row" id="sidebar" >
     <li><NavLink  to={'/'}>Home</NavLink></li>
+   {
+    user && <>
+      <li><NavLink  to={'/profile'}>Profile details</NavLink></li>
     <li><NavLink  to={'/updateProfile'}>Update Profile</NavLink></li>
+</>
+   }
 </div>
   </>
 
@@ -60,7 +65,7 @@ const Navbar = () => {
           <div>
           <button
                   onClick={handleLogOut}
-                  className="btn  bg-[#378CE7] hover:bg-[#1181f8] text-[#ecf0f1]">Logout</button>
+                  className="btn p-2 md:p-4 bg-[#378CE7] hover:bg-[#1181f8] text-[#ecf0f1]">Logout</button>
           </div>
           </>
             :

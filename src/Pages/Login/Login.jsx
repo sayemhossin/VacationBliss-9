@@ -1,13 +1,15 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link,useLocation,useNavigate } from "react-router-dom";
 import {  toast } from 'react-toastify';
 
 
 
 const Login = () => {
     const { signIn }= useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
 
     const {
         register,
@@ -20,10 +22,11 @@ const onSubmit = data =>{
 
     signIn(email,password)
     .then(() =>{
+      navigate(location?.state ? location.state:'/')
      toast.success('Login Success')
     })
-    .catch(err=>{
-        console.log(err)
+    .catch(()=>{
+       toast.error('something went wrong')
     })
 
 }

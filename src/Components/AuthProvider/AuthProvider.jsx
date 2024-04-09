@@ -7,19 +7,29 @@ export const AuthContext = createContext(null)
 const AuthProvider = ({children}) => {
 
 const [user,setUser] = useState(null)
+const [loading,setLoading] = useState(true)
+
+
+
+
+
     const createUser = (email,password) =>{
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const signIn = (email,password)=>{
+        setLoading(true)
         return signInWithEmailAndPassword(auth,email,password)
     }
 
 const logOut = () =>{
+    setLoading(true)
     return signOut(auth)
 }
 
 const updateUserProfile = (name, photo) => {
+   
     return updateProfile(auth.currentUser, {
         displayName: name,
         photoURL: photo
@@ -31,8 +41,10 @@ const updateUserProfile = (name, photo) => {
 
 useEffect(()=>{
     const unSubscribe =  onAuthStateChanged(auth, user =>{
-        console.log('user in auth',user)
+        
+       
         setUser(user)
+        setLoading(false)
         
       })
       return () =>{
@@ -46,7 +58,9 @@ useEffect(()=>{
         signIn,
         logOut,
         user,
-        updateUserProfile
+        updateUserProfile,
+        loading,
+        
     }
     return (
        <AuthContext.Provider value={authInfo}>
