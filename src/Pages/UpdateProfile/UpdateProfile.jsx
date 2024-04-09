@@ -40,7 +40,7 @@ const handleSubmit = (e) =>{
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
-                <input name="name" type="text" placeholder="Name" className="input input-bordered" required />
+                <input name="name" type="text" placeholder="Name" className="input input-bordered"  />
                 
               </div>
 
@@ -51,7 +51,7 @@ const handleSubmit = (e) =>{
                 <label className="label">
                   <span className="label-text">Photo Url</span>
                 </label>
-                <input name="photo" type="text" placeholder="Photo Url" className="input input-bordered" required />
+                <input name="photo" type="text" placeholder="Photo Url" className="input input-bordered"  />
               </div>
 
              

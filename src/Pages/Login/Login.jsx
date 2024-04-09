@@ -3,11 +3,12 @@ import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 
 
 const Login = () => {
-  const { signIn, googleLogin } = useContext(AuthContext)
+  const { signIn, googleLogin,githubLogin } = useContext(AuthContext)
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -32,10 +33,18 @@ const Login = () => {
   }
 const handleGoogleClick = () =>{
   googleLogin()
-  .then()
+  .then(()=>{
+    navigate(location?.state ? location.state : '/')
+  })
   .catch()
 }
-
+const handleGithubLogin = () =>{
+  githubLogin()
+  .then(()=>{
+    navigate(location?.state ? location.state : '/')
+  })
+  .catch()
+}
 
 
   return (
@@ -79,9 +88,10 @@ const handleGoogleClick = () =>{
             </div>
           </form>
          
-          <div className="flex justify-around mb-5">
-            <button onClick={handleGoogleClick} className="btn btn-outline btn-info">Google</button>
-            <button className="btn btn-outline btn-info">GitHub</button>
+          <div className="flex justify-around mb-5 items-center">
+            <p className="font-bold ">Continue with</p>
+            <button onClick={handleGoogleClick} className="btn btn-link "><FaGoogle></FaGoogle> Google</button>
+            <button onClick={handleGithubLogin} className="btn btn-link "><FaGithub/> GitHub</button>
           </div>
           <div>
             <p className="text-center">Do Not Have Account? <Link className="text-blue-800 font-bold" to={'/register'}>Register now</Link></p>
