@@ -8,7 +8,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 const Register = () => {
-  const { createUser, updateUserProfile } = useContext(AuthContext)
+  const { createUser, updateUserProfile,logOut } = useContext(AuthContext)
   const [passwordValidation, setPasswordValidation] = useState('')
   const [show,setShow]= useState(false)
 
@@ -49,7 +49,9 @@ const Register = () => {
         updateUserProfile(name, photo)
           .then(() => {
             toast.success('Registered Successfully')
-            navigate('/')
+            logOut()
+            .then()
+            navigate('/login')
           })
       })
       .catch(err => {

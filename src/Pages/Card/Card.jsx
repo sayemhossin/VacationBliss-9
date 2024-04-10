@@ -8,7 +8,7 @@ const {id,image,estate_title,segment_name,description,price,status,area,location
 		<div className="flex items-center justify-center  mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
 			<img src={image} alt="image" className="object-contain h-72 w-[600px] lg:mt-[30%] p-2 lg:p-4 sm:h-80 lg:h-96 xl:h-112  2xl:h-128" />
 		</div>
-		<div className="flex flex-col justify-center  lg:mr-80 p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+		<div className="flex flex-col justify-center  lg:mr-72 p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
 			<h1 className="text-3xl md:text-5xl font-bold leading-none sm:text-6xl">{estate_title}
 			</h1>
 			<div className="divider mt-0 mb-0"></div>

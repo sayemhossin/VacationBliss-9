@@ -16,10 +16,12 @@ const Navbar = () => {
   const links = <>
   <div className="flex  flex-col lg:flex-row" id="sidebar" >
     <li><NavLink  to={'/'}>Home</NavLink></li>
+    <li><NavLink  to={'/about'}>About</NavLink></li>
    {
     user && <>
       <li><NavLink  to={'/profile'}>Profile details</NavLink></li>
     <li><NavLink  to={'/updateProfile'}>Update Profile</NavLink></li>
+    <li><NavLink  to={'/contact'}>Contact Us</NavLink></li>
 </>
    }
 </div>
@@ -36,7 +38,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link to={'/'} className="btn font-extrabold btn-ghost text-xl  md:text-4xl">VacationBliss</Link>
+        <Link to={'/'} className="hover:bg-white text-2xl  bg-gradient-to-r from-[#6d82df] via-[#093872] to-[#1b62b4] text-transparent bg-clip-text bg-300% animate-gradient font-extrabold btn-ghost  md:text-4xl">VacationBliss</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -65,7 +67,7 @@ const Navbar = () => {
           <div>
           <button
                   onClick={handleLogOut}
-                  className="btn p-2 md:p-4 bg-[#378CE7] hover:bg-[#1181f8] text-[#ecf0f1]">Logout</button>
+                  className="btn p-1 text-[12px] md:text-[17px] md:p-4 bg-[#378CE7] hover:bg-[#1181f8] text-[#ecf0f1]">Logout</button>
           </div>
           </>
             :
