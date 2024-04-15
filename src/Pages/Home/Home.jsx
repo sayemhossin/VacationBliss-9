@@ -2,12 +2,20 @@ import Avarage from "../../Components/Avarage/Avarage";
 import Team from "../../Components/Team/Team";
 import DataCatagory from "../DataCatagory/DataCatagory";
 import BannerSlider from "./BannerSlider";
+import Marquee from "react-fast-marquee";
 
 const Home = () => {
   
     return (
         <div>
-           
+      <div className="mt-12">
+      <Marquee speed={70} className="text-xl text-[#144172] font-extrabold">
+<i> Welcome to VacationBliss Company LTD.  <span className="mr-12">Your gateway to dream vacations, offering curated destinations and exclusive deals.</span></i>
+</Marquee>
+
+
+
+      </div>
            
            <BannerSlider></BannerSlider>
 

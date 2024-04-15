@@ -57,7 +57,7 @@ const handleSubmit = (e) =>{
              
 
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Update</button>
+                <button className="btn border-0 hover:bg-[#1f83ee] bg-[#378CE7] btn-primary">Update</button>
               </div>
             </form>
           </div>

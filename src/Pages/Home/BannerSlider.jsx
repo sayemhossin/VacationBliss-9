@@ -1,7 +1,7 @@
 
 const BannerSlider = () => {
     return (
-        <div className="carousel md:h-[500px] lg:h-[700px] w-full mt-12 rounded-md">
+        <div className="carousel md:h-[500px] lg:h-[700px] w-full  rounded-md">
   <div id="slide1" className="carousel-item relative w-full">
     <img src="https://i.ibb.co/bddjfk2/THEME-HOTEL-SIGN-FIVE-STARS-FACADE-BUILDING-Getty-Images-1320779330-3.jpg" className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
