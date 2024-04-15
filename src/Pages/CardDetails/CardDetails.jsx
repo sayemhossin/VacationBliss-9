@@ -4,7 +4,6 @@ import {useLoaderData,useParams} from 'react-router-dom'
 const CardDetails = () => {
  const cards = useLoaderData()
  const {id} = useParams()
-
 const card =  cards.find(card => card.id == id)
 
     console.log(card)
@@ -34,6 +33,13 @@ const card =  cards.find(card => card.id == id)
   
   </div>
 </div>
+
+
+
+
+
+
+
         </div>
     );
 };

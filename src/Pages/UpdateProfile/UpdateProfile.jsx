@@ -29,7 +29,7 @@ const handleSubmit = (e) =>{
         <div className="hero mt-12 mb-12">
         <div className="hero-content flex-col w-full">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Update Your Profile</h1>
+            <h1 className="text-5xl text-blue-900 font-bold">Update Your Profile</h1>
           
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
