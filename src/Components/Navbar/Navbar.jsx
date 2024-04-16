@@ -52,10 +52,9 @@ const Navbar = () => {
            <div className="tooltip flex dropdown-end" data-tip={user?.displayName || 'user name not found'}>
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src={user?.photoURL} />
+                <img src={user?.photoURL  || 'https://i.ibb.co/sgsSHth/360-F-229758328-7x8jw-Cwjt-BMm-C6rg-Fz-LFh-Zo-Ep-Lob-B6-L8.jpg'} />
               </div>
             </label>
-            
            
           </div>
           <div>

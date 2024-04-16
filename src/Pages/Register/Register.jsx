@@ -4,6 +4,7 @@ import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -65,6 +66,9 @@ const Register = () => {
 
   return (
     <div className="hero mt-14 mb-14">
+      <Helmet>
+            <title>Register-VacationBliss</title>
+          </Helmet>
       <div className="hero-content flex-col w-full">
         <div className="text-center lg:text-left">
           <h1 className="text-4xl md:text-5xl   text-[#215c9c] font-bold">Register Now!</h1>

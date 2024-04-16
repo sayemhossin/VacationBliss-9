@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { FaCaretRight } from 'react-icons/fa';
 import {useLoaderData,useParams} from 'react-router-dom'
 
@@ -9,7 +10,9 @@ const card =  cards.find(card => card.id == id)
     console.log(card)
     return (
         <div>
-     
+     <Helmet>
+            <title>Details-VacationBliss</title>
+          </Helmet>
 
         <div className="card w-full  mt-12  border-2">
   <figure>

@@ -1,7 +1,11 @@
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
 	return (
 		<div>
+			<Helmet>
+				<title>About-VacationBliss</title>
+			</Helmet>
 			<div className=" mt-9 mx-auto space-y-12">
 				<article className="space-y-8 rounded-md dark:bg-gray-100 dark:text-gray-600 p-6">
 					<div className="space-y-6">

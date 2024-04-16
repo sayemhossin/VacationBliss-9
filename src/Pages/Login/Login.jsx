@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -51,6 +52,9 @@ const handleGithubLogin = () =>{
 
   return (
     <div className="hero mt-14 mb-14">
+      <Helmet>
+            <title>Login-VacationBliss</title>
+          </Helmet>
       <div className="hero-content flex-col w-full">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl text-[#215c9c] font-bold">Login Now!</h1>

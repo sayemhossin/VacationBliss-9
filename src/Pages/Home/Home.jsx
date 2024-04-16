@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Avarage from "../../Components/Avarage/Avarage";
 import Team from "../../Components/Team/Team";
 import DataCatagory from "../DataCatagory/DataCatagory";
@@ -7,7 +8,10 @@ import Marquee from "react-fast-marquee";
 const Home = () => {
   
     return (
-        <div>
+        <div className="overflow-hidden">
+          <Helmet>
+            <title>VacationBliss</title>
+          </Helmet>
       <div className="mt-12 animate__animated animate__backInDown">
       <Marquee speed={70} className="text-xl text-[#144172] font-extrabold">
 <i> Welcome to VacationBliss Company LTD.  <span className="mr-12">Your gateway to dream vacations, offering curated destinations and exclusive deals.</span></i>

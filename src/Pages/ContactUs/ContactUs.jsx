@@ -1,9 +1,12 @@
+import { Helmet } from "react-helmet-async";
 
 const ContactUs = () => {
 	return (
 		<div>
 
-
+<Helmet>
+            <title>ContactUs-VacationBliss</title>
+          </Helmet>
 			<div className="space-y-4 text-center text-gray-600 mt-9 mb-9">
 <h1 className="text-xl md:text-3xl font-bold underline">Contact Us</h1>
 <p className="md:text-xl md:w-[700px] mx-auto">Have a question, suggestion, or just want to say hello? We had love to hear from you! Get in touch with us using one of the methods below:</p>

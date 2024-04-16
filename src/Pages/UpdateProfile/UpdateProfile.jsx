@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 const UpdateProfile = () => {
@@ -27,12 +28,15 @@ const handleSubmit = (e) =>{
 
     return (
         <div className="hero mt-12 mb-12">
+          <Helmet>
+            <title>UpdateProfile-VacationBliss</title>
+          </Helmet>
         <div className="hero-content flex-col w-full">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl text-blue-900 font-bold">Update Your Profile</h1>
           
           </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card shrink-0 w-full max-w-lg ] bg-base-100">
           
             <form onSubmit={handleSubmit} className="card-body">
 
@@ -40,7 +44,7 @@ const handleSubmit = (e) =>{
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
-                <input name="name" type="text" placeholder="Name" className="input input-bordered"  />
+                <input name="name" type="text" placeholder="Name" className="input input-bordered"  required/>
                 
               </div>
 
@@ -51,7 +55,7 @@ const handleSubmit = (e) =>{
                 <label className="label">
                   <span className="label-text">Photo Url</span>
                 </label>
-                <input name="photo" type="text" placeholder="Photo Url" className="input input-bordered"  />
+                <input name="photo" type="text" placeholder="Photo Url" className="input input-bordered"  required/>
               </div>
 
              
